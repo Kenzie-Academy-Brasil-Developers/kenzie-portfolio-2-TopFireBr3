@@ -24,12 +24,12 @@ export const HandEffect = () => {
     return () => observer.disconnect();
   }, []);
 
-  return (
+  return (<>
     <span
       ref={hand}
       style={{ display: "inline-flex", transform: "rotate(320deg)" }}
     >
-      ✋
-    </span>
+      ✋</span></>
+
   );
 };

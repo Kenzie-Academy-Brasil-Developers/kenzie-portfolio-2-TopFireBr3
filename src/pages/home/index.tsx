@@ -29,7 +29,7 @@ import {
 import { HandEffect } from "@/components/HandEffect";
 
 export const Home = (): JSX.Element => {
-  return (
+  return (<>
     <main id="home">
       <Header>
         <Container>
@@ -43,33 +43,32 @@ export const Home = (): JSX.Element => {
                 height={"48px"}
               />
               <Text color="grey4" css={{ marginLeft: "$2" }}>
-                Hello, my name is {userData.nameUser} <HandEffect />
+              Olá, meu nome é. {userData.nameUser} <HandEffect />
               </Text>
             </Flex>
             <Text as="h1" type="heading1" color="grey5">
-              I{" "}
+              Eu{" "}
               <Text as="span" type="heading1" color="brand1">
-                love
+                Gosto
               </Text>{" "}
-              creating and{" "}
+              de criar e{" "}
               <Text as="span" type="heading1" color="brand1">
-                developing
+              Desenvolver
               </Text>{" "}
-              projects
+              Projetos
             </Text>
             <Text type="body1" color="grey2">
-              Discover here in this environment, created especially for you, all
-              my projects and technologies
+            Descubra aqui neste ambiente, criado especialmente para você, todos meus projetos e tecnologias
             </Text>
             <HeaderButtonsArea>
               <Button as="a" type="primary" href="#projects">
-                See Projects
+              Ver Projetos
               </Button>
               <Button
                 as="a"
                 type="circle"
                 target="_blank"
-                href={userData.githubUser}
+                href={`https://github.com/TopFireBr3`}
               >
                 <FaGithub />
               </Button>
@@ -87,10 +86,10 @@ export const Home = (): JSX.Element => {
           <ProjectAreaWrapperColumns>
             <ProjectsAreaSocialMediaMessage>
               <Text as="h2" type="heading4" color="grey4">
-                My projects
+              Meus projetos
               </Text>
               <Text as="p" type="body1" color="grey2">
-                Projects created at{" "}
+              Projetos criados em{" "}
                 <Text as="span" color="brand5">
                   Kenzie Academy
                 </Text>
@@ -103,6 +102,6 @@ export const Home = (): JSX.Element => {
         </Container>
       </ProjectsArea>
       <Contacts />
-    </main>
+    </main></>
   );
 };

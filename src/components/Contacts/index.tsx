@@ -21,22 +21,21 @@ export const Contacts = () => {
 
   const { scrollYProgress } = useViewportScroll();
 
-  return (
+  return (<>
     <ContactSection id="contact">
       <Container>
         <ContactSectionContent ref={ref}>
           <motion.div style={{ opacity: scrollYProgress }}>
             <ContactSectionText>
               <Text type="heading2" color="grey4">
-                Let's set up a conversation and{" "}
+              Vamos marcar uma conversa e{" "}
                 <Text as="span" type="heading2" color="brand1">
-                  develop our creativity
+                desenvolver nossa criatividade
                 </Text>{" "}
-                together?
+                juntos?
               </Text>
               <Text color="grey2" type="body1">
-                Advertise your brand organically within Dribbble’s design
-                inspiration feed.
+              Anuncie sua marca organicamente dentro do design da Dribbble alimentação de inspiração.
               </Text>
             </ContactSectionText>
           </motion.div>
@@ -47,11 +46,10 @@ export const Contacts = () => {
               </ContactCardImage>
               <ContactCardContent>
                 <Text type="heading4" color="grey4">
-                  My Whatsapp
+                 Whatsapp
                 </Text>
                 <Text color="grey2" type="body2">
-                  I'm available for a voice chat, let's about creativity
-                  together?
+                Estou disponível para um bate-papo por voz, vamos sobre criatividade junto?
                 </Text>
                 <Text
                   as="a"
@@ -60,7 +58,7 @@ export const Contacts = () => {
                   target="_blank"
                   href={`https://api.whatsapp.com/send?phone=+55+${userData.whatsappNumber}&text=Ol%C3%A1%2C%20venho%20por%20meio%20do%20seu%20portf%C3%B3lio%20na%20internet%2C%20gostaria%20de%20conhecer%20melhor%20seus%20servi%C3%A7os`}
                 >
-                  Talk Now
+                  Fale agora
                 </Text>
               </ContactCardContent>
             </ContactCard>
@@ -71,19 +69,19 @@ export const Contacts = () => {
               </ContactCardImage>
               <ContactCardContent>
                 <Text type="heading4" color="grey4">
-                  My email
+                  Email
                 </Text>
                 <Text color="grey2" type="body2">
-                  Send me an email reporting feedbacks, suggestions and ideas
+                Send me an email reporting feedbacks, suggestions and ideas
                 </Text>
                 <Text
                   as="a"
                   color="grey2"
                   type="body2"
                   target="_blank"
-                  href={`mailto=${userData.emailUser}`}
+                  href={`https://mail.google.com/mail/?view=cm&fs=1&to=ggabriel.p2003@gmail.com.example`}
                 >
-                  Send email now
+                  Envie e-mail agora
                 </Text>
               </ContactCardContent>
             </ContactCard>
@@ -93,26 +91,25 @@ export const Contacts = () => {
               </ContactCardImage>
               <ContactCardContent>
                 <Text type="heading4" color="grey4">
-                  My LinkedIn
+                  LinkedIn
                 </Text>
                 <Text color="grey2" type="body2">
-                  We can create more constant interactions as well as a sharing
-                  network
+                Podemos criar interações mais constantes, bem como um compartilhamento rede
                 </Text>
                 <Text
                   as="a"
                   color="grey2"
                   type="body2"
                   target="_blank"
-                  href={userData.linkedinUser}
+                  href={`https://www.linkedin.com/in/${userData.linkedinUser}`}
                 >
-                  Go to Telegram Now
+                  Vá para o Telegram agora
                 </Text>
               </ContactCardContent>
             </ContactCard>
           </ContactsCards>
         </ContactSectionContent>
       </Container>
-    </ContactSection>
+    </ContactSection></>
   );
 };
