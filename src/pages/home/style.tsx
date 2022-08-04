@@ -68,6 +68,9 @@ export const StackCards = styled("div", {
 
   "@mobile": {
     gridTemplateColumns: "1fr 1fr",
+    display:"flex",
+    justifyContent: "center",
+    flexWrap: "wrap",
   },
 });
 

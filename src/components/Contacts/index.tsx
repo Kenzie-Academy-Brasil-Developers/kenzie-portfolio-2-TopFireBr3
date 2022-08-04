@@ -1,7 +1,6 @@
 import { Container } from "@/styles/Global";
 import { Text } from "@/styles/Text";
 import { motion, useViewportScroll } from "framer-motion";
-
 import {
   ContactSection,
   ContactSectionContent,
