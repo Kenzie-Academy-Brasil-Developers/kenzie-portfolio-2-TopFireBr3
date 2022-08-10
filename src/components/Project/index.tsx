@@ -23,7 +23,7 @@ interface ReposType {
 
 export const Project = (): JSX.Element => {
   const [repositories, setRepositories] = useState<ReposType[]>([]);
-
+  
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetch(
@@ -35,7 +35,7 @@ export const Project = (): JSX.Element => {
     };
     fetchData();
   }, []);
-
+  console.log(repositories)
   return (
     <>
       {repositories?.map((repository) => (
@@ -76,7 +76,7 @@ export const Project = (): JSX.Element => {
               <FaGithub /> Código do Github
             </ProjectLink>
             {repository.homepage && (
-              <ProjectLink target="_blank" href={repository.homepage}>
+              <ProjectLink target="_blank" href={`https://${repository.homepage}`}>
                 <FaShare /> Aplicação
               </ProjectLink>
             )}
